@@ -3,15 +3,24 @@ import json
 from os import listdir, getcwd
 from os.path import join
 
-classes = ["person","bicycle","car","motorcycle","airplane","bus","train","truck","boat","traffic light","fire hydrant","stop sign","parking meter","bench","bird","cat","dog","horse","sheep","cow","elephant","bear","zebra","giraffe","backpack","umbrella","handbag","tie","suitcase","frisbee","skis","snowboard","sports ball","kite","baseball bat","baseball glove","skateboard","surfboard","tennis racket","bottle","wine glass","cup","fork","knife","spoon","bowl","banana","apple","sandwich","orange","broccoli","carrot","hot dog","pizza","donut","cake","chair","couch","potted plant","bed","dining table","toilet","tv","laptop","mouse","remote","keyboard","cell phone","microwave","oven","toaster","sink","refrigerator","book","clock","vase","scissors","teddy bear","hair drier","toothbrush"]
+classes = ["person","bicycle","car","motorcycle","airplane","bus","train",
+	   "truck","boat","traffic light","fire hydrant","stop sign","parking meter",
+	   "bench","bird","cat","dog","horse","sheep","cow","elephant","bear","zebra",
+	   "giraffe","backpack","umbrella","handbag","tie","suitcase","frisbee","skis",
+	   "snowboard","sports ball","kite","baseball bat","baseball glove","skateboard",
+	   "surfboard","tennis racket","bottle","wine glass","cup","fork","knife","spoon",
+	   "bowl","banana","apple","sandwich","orange","broccoli","carrot","hot dog","pizza",
+	   "donut","cake","chair","couch","potted plant","bed","dining table","toilet","tv",
+	   "laptop","mouse","remote","keyboard","cell phone","microwave","oven","toaster","sink",
+	   "refrigerator","book","clock","vase","scissors","teddy bear","hair drier","toothbrush"]
 
 #box form[x,y,w,h]
 def convert(size,box):
     dw = 1./size[0]
     dh = 1./size[1]
     x = box[0]*dw
-    w = box[1]*dw
-    y = box[2]*dh
+    y = box[1]*dh
+    w = box[2]*dw
     h = box[3]*dh
     return (x,y,w,h)
 
