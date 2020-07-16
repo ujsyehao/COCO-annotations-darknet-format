@@ -13,3 +13,7 @@ bounding boxes in the image.
 and we just use instances_train2014/val2014.json，the other three annotation files just have image paths and don't have bounding boxes.
 
 3. Information about instances_train2014/val2014.json,you should look at the COCO website.
+
+
+## pascal-to-coco format
+provide script **coco_format_yehao.py**
