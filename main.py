@@ -37,7 +37,7 @@ def convert_annotation():
         for item2 in value:
 	    category_id = item2['category_id']
 	    value1 = filter(lambda item3: item3['id'] == category_id,data['categories'])
-	    name = value1[0]['name']
+	    name = value1.__next__()['name']
 	    class_id = classes.index(name)
 	    box = item2['bbox']
 	    bb = convert((width,height),box)
